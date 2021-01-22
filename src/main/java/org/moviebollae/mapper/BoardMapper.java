@@ -7,7 +7,6 @@ import org.moviebollae.domain.BoardVO;
 
 public interface BoardMapper {
 	
-	@Select("select * from tbl_board where bno > 0")
-	public List<BoardVO> getList();
+	public List<BoardVO> getList();	// 게시글 전체 조회
 
 }
