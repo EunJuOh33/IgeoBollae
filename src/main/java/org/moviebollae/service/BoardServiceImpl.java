@@ -27,10 +27,13 @@ public class BoardServiceImpl implements BoardService {
 		mapper.insertSelectKey(board);
 	}
 
+	/* 글 번호(bno)로 게시글 하나 조회 */
 	@Override
 	public BoardVO get(Long bno) {
-		// TODO Auto-generated method stub
-		return null;
+
+		log.info("get......");
+		
+		return mapper.read(bno);
 	}
 
 	@Override
