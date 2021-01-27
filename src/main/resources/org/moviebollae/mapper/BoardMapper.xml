@@ -31,4 +31,10 @@
 	<select id="read" resultType="org.moviebollae.domain.BoardVO">
 		select * from tbl_board where bno = #{bno}
 	</select>
+	
+	<!-- delete 삭제 
+		정상적으로 데이터가 삭제되면 1이상의 값 반환. 해당 번호의 게시글이 없다면 0 반환 -->
+	<delete id="delete">
+		delete from tbl_board where bno = #{bno}
+	</delete>
 </mapper>

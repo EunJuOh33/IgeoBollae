@@ -61,4 +61,9 @@ public class BoardMapperTests {
 		log.info(board);
 	}
 	
+	@Test
+	public void testDelete() {
+		
+		log.info("Delete Count: " + mapper.delete(3L));	// 해당 번호의 게시글이 없다면 0 출력
+	}
 }

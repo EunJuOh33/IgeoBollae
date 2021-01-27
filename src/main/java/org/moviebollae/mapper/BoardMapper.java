@@ -15,4 +15,6 @@ public interface BoardMapper {
 	
 	public BoardVO read(Long bno);
 	
+	public int delete(Long bno);
+	
 }
