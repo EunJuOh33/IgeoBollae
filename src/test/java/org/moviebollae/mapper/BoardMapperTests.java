@@ -39,18 +39,26 @@ public class BoardMapperTests {
 //							// bno = null 로 비어있게 된다.
 //	}
 	
-	@Test
-	public void testInsertSelectKey() {
+//	@Test
+//	public void testInsertSelectKey() {
+//	
+//		BoardVO board = new BoardVO();
+//		
+//		board.setTitle("테스트 - 새로 작성하는 글 selectKey");
+//		board.setContent("테스트 - 새로 작성하는 내용 selectKey");
+//		board.setWriter("TESTnewbie");
+//		
+//		mapper.insertSelectKey(board);
+//		
+//		log.info(board);	// bno = 7 
+//	}
 	
-		BoardVO board = new BoardVO();
+	@Test
+	public void testRead() {
 		
-		board.setTitle("테스트 - 새로 작성하는 글 selectKey");
-		board.setContent("테스트 - 새로 작성하는 내용 selectKey");
-		board.setWriter("TESTnewbie");
+		BoardVO board = mapper.read(5L);
 		
-		mapper.insertSelectKey(board);
-		
-		log.info(board);	// bno = 7 
+		log.info(board);
 	}
 	
 }

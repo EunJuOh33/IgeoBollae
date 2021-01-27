@@ -12,6 +12,7 @@
 		<![CDATA[ select * from tbl_board where bno > 0 ]]>	
 	</select>
 	
+	<!-- insert 게시글 쓰기 -->
 	<insert id="insert">
 		insert into tbl_board (bno, title, content, writer)
 		values (seq_board.nextval, #{title}, #{content}, #{writer})
@@ -26,4 +27,8 @@
 		values (#{bno}, #{title}, #{content}, #{writer})
 	</insert>
 	
+	<!-- read 조회 -->
+	<select id="read" resultType="org.moviebollae.domain.BoardVO">
+		select * from tbl_board where bno = #{bno}
+	</select>
 </mapper>
