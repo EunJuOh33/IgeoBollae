@@ -9,4 +9,7 @@ public interface BoardMapper {
 	
 	public List<BoardVO> getList();	// 게시글 전체 조회
 
+	public void insert(BoardVO board);
+	
+	public void insertSelectKey(BoardVO board);
 }

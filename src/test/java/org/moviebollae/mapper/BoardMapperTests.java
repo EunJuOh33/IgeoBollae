@@ -2,6 +2,7 @@ package org.moviebollae.mapper;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.moviebollae.domain.BoardVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -22,4 +23,34 @@ public class BoardMapperTests {
 	public void testGetList() {
 		mapper.getList().forEach(board -> log.info(board));
 	}
+	
+//	@Test
+//	public void testInsert() {
+//	
+//		BoardVO board = new BoardVO();
+//		
+//		board.setTitle("테스트 - 새로 작성하는 글");
+//		board.setContent("테스트 - 새로 작성하는 내용");
+//		board.setWriter("TESTnewbie");
+//		
+//		mapper.insert(board);
+//		
+//		log.info(board);	// BoardVO의 toString() 결과 출력
+//							// bno = null 로 비어있게 된다.
+//	}
+	
+	@Test
+	public void testInsertSelectKey() {
+	
+		BoardVO board = new BoardVO();
+		
+		board.setTitle("테스트 - 새로 작성하는 글 selectKey");
+		board.setContent("테스트 - 새로 작성하는 내용 selectKey");
+		board.setWriter("TESTnewbie");
+		
+		mapper.insertSelectKey(board);
+		
+		log.info(board);	// bno = 7 
+	}
+	
 }
