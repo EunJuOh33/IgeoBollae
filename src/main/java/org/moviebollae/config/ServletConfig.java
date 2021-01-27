@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
-@ComponentScan(basePackages = { "org.zerock.controller" })
+@ComponentScan(basePackages = { "org.moviebollae.controller" })
 public class ServletConfig implements WebMvcConfigurer {
 	
 	@Override
