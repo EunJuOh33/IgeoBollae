@@ -18,10 +18,13 @@ public class BoardServiceImpl implements BoardService {
 	private BoardMapper mapper;
 
 	
+	/* 게시글 등록 */
 	@Override
 	public void register(BoardVO board) {
-		// TODO Auto-generated method stub
 		
+		log.info("register......" + board);
+		
+		mapper.insertSelectKey(board);
 	}
 
 	@Override
@@ -42,10 +45,13 @@ public class BoardServiceImpl implements BoardService {
 		return false;
 	}
 
+	/* 모든 게시글 조회 */
 	@Override
 	public List<BoardVO> getList() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		log.info("getList......");
+		
+		return mapper.getList();
 	}
 	
 }
