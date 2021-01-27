@@ -36,16 +36,24 @@ public class BoardServiceImpl implements BoardService {
 		return mapper.read(bno);
 	}
 
+	/* 게시글 수정 
+	 * 결과가 1이라면 true, 아니라면 false 반환 */
 	@Override
 	public boolean modify(BoardVO board) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		log.info("update......");
+		
+		return mapper.update(board) == 1;
 	}
 
+	/* 게시글 삭제
+	 * 결과가 1이라면 true, 아니라면 false 반환 */
 	@Override
 	public boolean remove(Long bno) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		log.info("remove......");
+		
+		return mapper.delete(bno) == 1;
 	}
 
 	/* 모든 게시글 조회 */
