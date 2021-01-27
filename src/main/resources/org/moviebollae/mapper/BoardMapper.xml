@@ -12,7 +12,8 @@
 		<![CDATA[ select * from tbl_board where bno > 0 ]]>	
 	</select>
 	
-	<!-- insert 게시글 쓰기 -->
+	<!-- insert 게시글 쓰기 
+		 반환 : 1 (여러개인 경우도 1) -->
 	<insert id="insert">
 		insert into tbl_board (bno, title, content, writer)
 		values (seq_board.nextval, #{title}, #{content}, #{writer})
@@ -33,8 +34,16 @@
 	</select>
 	
 	<!-- delete 삭제 
-		정상적으로 데이터가 삭제되면 1이상의 값 반환. 해당 번호의 게시글이 없다면 0 반환 -->
+		 반환 : 삭제 된 행의 개수 (없으면 0) -->
 	<delete id="delete">
 		delete from tbl_board where bno = #{bno}
 	</delete>
+	
+	<!-- update 수정 
+		 반환 : 업데이트 된 행의 개수 (없으면 0) -->
+	<update id="update">
+		update tbl_board 
+			set title = #{title}, content =#{content}, writer = #{writer}, updateDate = sysdate
+			where bno = #{bno}
+	</update>
 </mapper>
