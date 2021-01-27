@@ -13,6 +13,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
+@ComponentScan(basePackages= {"org.moviebollae.service"})
 @MapperScan(basePackages= {"org.moviebollae.mapper"})
 public class RootConfig {
 
