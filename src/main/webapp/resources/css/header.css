@@ -1,0 +1,79 @@
+* {
+	margin: 0; 
+	padding: 0;
+}
+
+html, body {
+	width:100%; 
+	height:100%;
+	font-family: sans-serif;
+}
+
+
+/* ------------------------------------------------------ */
+header {
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 51;
+    background: rgb(20, 20, 20);	/* 검은색 */
+    text-align: center;
+    width: 100%;
+    height: 62px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 0px 0px;
+    transition: background-color 200ms ease 0s;
+}   
+
+header div {
+	max-width: 1320px;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 100%;
+}
+
+header div .header_ul {
+	list-style: none;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+header div .header_ul .h_logo {
+	margin: 15px 15px 0px 0px;
+}
+
+header div .header_ul .h_logo a {
+	color: white;
+}
+
+header div .header_ul .h_search {
+	display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 62px;
+    flex-shrink: 1;
+    margin: 0px 0px 0px auto;
+    transition: all 0.5s ease 0s;
+}
+
+header div .header_ul .h_search #searchContainer {
+	position: relative;
+    width: 100%;
+}
+
+header div .header_ul .h_search #searchContainer div {
+	margin: 12px 0px;
+}
+
+header div .header_ul .h_search #searchContainer .search_label {
+	display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 38px;
+    padding: 7px 10px 8px 36px;
+    border-radius: 2px;
+}
